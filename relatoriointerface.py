@@ -23,7 +23,7 @@ def consolidate_interfaces(input_file, output_file):
     with open(output_file, "w") as output:
         for interface, vlans in interface_dict.items():
             output.write(f"interface {interface}\n")
-            output.write(f" switchport trunk allowed vlan {','.join(vlans)}\n\n")
+            output.write(f" switchport trunk allowed vlan  remove{','.join(vlans)}\n\n")
 
     print(f"Arquivo consolidado criado: {output_file}")
 
